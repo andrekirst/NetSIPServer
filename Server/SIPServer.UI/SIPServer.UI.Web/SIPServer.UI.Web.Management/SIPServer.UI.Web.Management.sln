@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPServer.UI.Web.Management", "SIPServer.UI.Web.Management\SIPServer.UI.Web.Management.csproj", "{A1E7ED5D-F36C-4DE3-AA7A-079A1E578FD2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs06.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SIPServer.UI.Web.Management\\SIPServer.UI.Web.Management.csproj
+		SccProjectName1 = SIPServer.UI.Web.Management
+		SccLocalPath1 = SIPServer.UI.Web.Management
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1E7ED5D-F36C-4DE3-AA7A-079A1E578FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E7ED5D-F36C-4DE3-AA7A-079A1E578FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E7ED5D-F36C-4DE3-AA7A-079A1E578FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E7ED5D-F36C-4DE3-AA7A-079A1E578FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "SIPServer.Database"
+   MSDTVersion = "80"
+   DefDBRef = "andrekirst-pc\sqlsrv10.NetSIPServer.dbo"
+   SccProjectName = "SAK"
+   SccLocalPath = "SAK"
+   SccAuxPath = "SAK"
+   SccProvider = "SAK"
+   Begin DBRefFolder = "Database References"
+      Begin DBRefNode = "andrekirst-pc\sqlsrv10.NetSIPServer.dbo"
+         ConnectStr = "Data Source=.\SQLSRV10;Initial Catalog=NetSIPServer;Integrated Security=True"
+         Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
+         Colorizer = 6
+      End
+   End
+   Begin Folder = "MSSQL"
+      Begin Folder = "Change Scripts"
+      End
+      Begin Folder = "Create Scripts"
+      End
+      Begin Folder = "Generated Scripts"
+      End
+   End
+   Begin Folder = "MySQL"
+      Begin Folder = "Change Scripts"
+      End
+      Begin Folder = "Create Scripts"
+      End
+      Begin Folder = "Generated Scripts"
+      End
+   End
+   Begin Folder = "Oracle"
+      Begin Folder = "Change Scripts"
+      End
+      Begin Folder = "Create Scripts"
+      End
+      Begin Folder = "Generated Scripts"
+      End
+   End
+   Begin Folder = "PostgreSQL"
+      Begin Folder = "Change Scripts"
+      End
+      Begin Folder = "Create Scripts"
+      End
+      Begin Folder = "Generated Scripts"
+      End
+   End
+End

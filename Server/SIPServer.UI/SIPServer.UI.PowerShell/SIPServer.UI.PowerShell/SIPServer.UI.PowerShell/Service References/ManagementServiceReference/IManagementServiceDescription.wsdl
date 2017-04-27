@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://www.andrekirst.de/SIPServer/IManagementService" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://www.andrekirst.de/SIPServer/IManagementService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.andrekirst.de/SIPServer/IManagementService/Imports">
+      <xsd:import schemaLocation="http://localhost:8890/IManagementServiceDescription?xsd=xsd0" namespace="http://www.andrekirst.de/SIPServer/IManagementService" />
+      <xsd:import schemaLocation="http://localhost:8890/IManagementServiceDescription?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8890/IManagementServiceDescription?xsd=xsd2" namespace="http://wwwn.andrekirst.de/NetSIPServer/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IManagementServiceContract_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IManagementServiceContract_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagementServiceContract_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IManagementServiceContract_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagementServiceContract_GetSIPServerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIPServerList" />
+  </wsdl:message>
+  <wsdl:message name="IManagementServiceContract_GetSIPServerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIPServerListResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IManagementServiceContract">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Login">
+      <wsdl:input wsaw:Action="http://www.andrekirst.de/SIPServer/IManagementService/IManagementServiceContract/Login" message="tns:IManagementServiceContract_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.andrekirst.de/SIPServer/IManagementService/IManagementServiceContract/LoginResponse" message="tns:IManagementServiceContract_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="true" name="Logout">
+      <wsdl:input wsaw:Action="http://www.andrekirst.de/SIPServer/IManagementService/IManagementServiceContract/Logout" message="tns:IManagementServiceContract_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.andrekirst.de/SIPServer/IManagementService/IManagementServiceContract/LogoutResponse" message="tns:IManagementServiceContract_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSIPServerList">
+      <wsdl:input wsaw:Action="http://www.andrekirst.de/SIPServer/IManagementService/IManagementServiceContract/GetSIPServerList" message="tns:IManagementServiceContract_GetSIPServerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.andrekirst.de/SIPServer/IManagementService/IManagementServiceContract/GetSIPServerListResponse" message="tns:IManagementServiceContract_GetSIPServerList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

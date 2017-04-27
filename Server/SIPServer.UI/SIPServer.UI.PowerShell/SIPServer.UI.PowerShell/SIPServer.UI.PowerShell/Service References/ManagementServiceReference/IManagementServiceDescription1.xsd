@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.andrekirst.de/SIPServer/IManagementService" elementFormDefault="qualified" targetNamespace="http://www.andrekirst.de/SIPServer/IManagementService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8890/IManagementServiceDescription?xsd=xsd2" namespace="http://wwwn.andrekirst.de/NetSIPServer/Model" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSIPServerList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSIPServerListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://wwwn.andrekirst.de/NetSIPServer/Model" minOccurs="0" name="GetSIPServerListResult" nillable="true" type="q1:ArrayOfSIPServer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wwwn.andrekirst.de/NetSIPServer/Model" elementFormDefault="qualified" targetNamespace="http://wwwn.andrekirst.de/NetSIPServer/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSIPServer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SIPServer" nillable="true" type="tns:SIPServer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSIPServer" nillable="true" type="tns:ArrayOfSIPServer" />
+  <xs:complexType name="SIPServer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element name="IsMaster" type="xs:boolean" />
+      <xs:element name="IsProxy" type="xs:boolean" />
+      <xs:element name="IsSecondary" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SIPServerID" type="xs:int" />
+      <xs:element name="SIPServerUniqueName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoppedAt" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SIPServer" nillable="true" type="tns:SIPServer" />
+</xs:schema>

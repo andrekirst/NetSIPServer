@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="df45e841-2972-4341-a3c6-88e3f55a5f61" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8890/IManagementServiceDescription" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IManagementServiceDescription.wsdl" MetadataType="Wsdl" ID="ae730047-5dc3-44e8-8d1d-e688ad289794" SourceId="1" SourceUrl="http://localhost:8890/IManagementServiceDescription?wsdl=wsdl0" />
+    <MetadataFile FileName="IManagementServiceDescription.xsd" MetadataType="Schema" ID="2c5c2491-7b40-405a-911b-e15bd0998fcc" SourceId="1" SourceUrl="http://localhost:8890/IManagementServiceDescription?xsd=xsd1" />
+    <MetadataFile FileName="IManagementServiceDescription1.xsd" MetadataType="Schema" ID="86908108-5d0b-49ed-a586-7c900ef0d1f4" SourceId="1" SourceUrl="http://localhost:8890/IManagementServiceDescription?xsd=xsd0" />
+    <MetadataFile FileName="ManagementServiceImplementation.wsdl" MetadataType="Wsdl" ID="127b88cd-d569-440e-aab9-bdfa37b9b2e5" SourceId="1" SourceUrl="http://localhost:8890/IManagementServiceDescription" />
+    <MetadataFile FileName="IManagementServiceDescription2.xsd" MetadataType="Schema" ID="cdd697cf-3cab-4709-ba77-a604dcb201f5" SourceId="1" SourceUrl="http://localhost:8890/IManagementServiceDescription?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

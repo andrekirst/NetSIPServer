@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SIPServer.Model
 {
@@ -99,7 +96,7 @@ namespace SIPServer.Model
         public bool IsValidContextName(string value)
         {
             // return true if the valie is not empty/null and is a letter/digit
-            return !String.IsNullOrEmpty(value) && value.IsLetterOrDigit();
+            return !string.IsNullOrEmpty(value) && value.IsLetterOrDigit();
         }
         #endregion
     }

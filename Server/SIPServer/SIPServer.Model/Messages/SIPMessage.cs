@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SIPServer.Model.Header;
+﻿using SIPServer.Model.Header;
 using SIPServer.Model.Body;
 
 namespace SIPServer.Model.Messages

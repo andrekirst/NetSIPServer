@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SIPServer.Model;
+﻿using SIPServer.Model;
 using System.Data.Common;
 
 namespace SIPServer.Management.Database

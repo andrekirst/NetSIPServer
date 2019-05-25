@@ -1,13 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPServer", "SIPServer\SIPServer.csproj", "{7BE2B6C9-CE5A-48DF-88FA-11D69EEADF7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPServer.Services", "SIPServer.Services\SIPServer.Services.csproj", "{305573BB-C04A-459C-ADDE-E5DAF9166296}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPServer.Model", "SIPServer.Model\SIPServer.Model.csproj", "{7962373D-6F2C-45A5-A835-BB8AC51AB63B}"
 EndProject
-Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "SIPServer.Database", "SIPServer.Database\SIPServer.Database.dbp", "{C7C3DF37-303D-4FA9-AC63-C73B8D6572EC}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SIPServer.Database", "SIPServer.Database\SIPServer.Database.sqlproj", "{F88D735E-390F-4459-80BB-4E429F05C98D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPServer.Management", "SIPServer.Management\SIPServer.Management.csproj", "{3B0E9393-4540-446C-8A5A-1F7CA55A8842}"
 EndProject
@@ -26,48 +28,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPServer.Caching", "SIPServer.Caching\SIPServer.Caching.csproj", "{F01CD52D-062B-431B-93B6-7D49AAA2C1D1}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 13
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs06.codeplex.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SIPServer\\SIPServer.csproj
-		SccProjectName1 = SIPServer
-		SccLocalPath1 = SIPServer
-		SccProjectUniqueName2 = SIPServer.Services\\SIPServer.Services.csproj
-		SccProjectName2 = SIPServer.Services
-		SccLocalPath2 = SIPServer.Services
-		SccProjectUniqueName3 = SIPServer.Model\\SIPServer.Model.csproj
-		SccProjectName3 = SIPServer.Model
-		SccLocalPath3 = SIPServer.Model
-		SccProjectUniqueName4 = SIPServer.Database\\SIPServer.Database.dbp
-		SccProjectName4 = SIPServer.Database
-		SccLocalPath4 = SIPServer.Database
-		SccProjectUniqueName5 = SIPServer.Management\\SIPServer.Management.csproj
-		SccProjectName5 = SIPServer.Management
-		SccLocalPath5 = SIPServer.Management
-		SccProjectUniqueName6 = SIPServer.Hardware\\SIPServer.Hardware.csproj
-		SccProjectName6 = SIPServer.Hardware
-		SccLocalPath6 = SIPServer.Hardware
-		SccProjectUniqueName7 = SIPServer.Conferencing\\SIPServer.Conferencing.csproj
-		SccProjectName7 = SIPServer.Conferencing
-		SccLocalPath7 = SIPServer.Conferencing
-		SccProjectUniqueName8 = SIPServer.Management.Database\\SIPServer.Management.Database.csproj
-		SccProjectName8 = SIPServer.Management.Database
-		SccLocalPath8 = SIPServer.Management.Database
-		SccProjectUniqueName9 = SIPServer.Hosting\\SIPServer.Hosting.csproj
-		SccProjectName9 = SIPServer.Hosting
-		SccLocalPath9 = SIPServer.Hosting
-		SccProjectUniqueName10 = SIPServer.Media\\SIPServer.Media.csproj
-		SccProjectName10 = SIPServer.Media
-		SccLocalPath10 = SIPServer.Media
-		SccProjectUniqueName11 = SIPServer.Database.ClrFunctions\\SIPServer.Database.ClrFunctions.csproj
-		SccProjectName11 = SIPServer.Database.ClrFunctions
-		SccLocalPath11 = SIPServer.Database.ClrFunctions
-		SccProjectUniqueName12 = SIPServer.Caching\\SIPServer.Caching.csproj
-		SccProjectName12 = SIPServer.Caching
-		SccLocalPath12 = SIPServer.Caching
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -113,6 +73,24 @@ Global
 		{7962373D-6F2C-45A5-A835-BB8AC51AB63B}.Release|x64.Build.0 = Release|x64
 		{7962373D-6F2C-45A5-A835-BB8AC51AB63B}.Release|x86.ActiveCfg = Release|x86
 		{7962373D-6F2C-45A5-A835-BB8AC51AB63B}.Release|x86.Build.0 = Release|x86
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|x64.Build.0 = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|x86.Build.0 = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|x64.ActiveCfg = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|x64.Build.0 = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|x64.Deploy.0 = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|x86.ActiveCfg = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|x86.Build.0 = Release|Any CPU
+		{F88D735E-390F-4459-80BB-4E429F05C98D}.Release|x86.Deploy.0 = Release|Any CPU
 		{3B0E9393-4540-446C-8A5A-1F7CA55A8842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B0E9393-4540-446C-8A5A-1F7CA55A8842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B0E9393-4540-446C-8A5A-1F7CA55A8842}.Debug|x64.ActiveCfg = Release|x64
@@ -206,5 +184,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60C45958-4753-439F-B4ED-F24D016C9398}
 	EndGlobalSection
 EndGlobal

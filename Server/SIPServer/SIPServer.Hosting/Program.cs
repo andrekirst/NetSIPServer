@@ -3,7 +3,6 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using SIPServer.Services.Contracts;
 using SIPServer.Services.Implementations;
-using System.Net;
 
 namespace SIPServer.Hosting
 {
@@ -15,24 +14,26 @@ namespace SIPServer.Hosting
             ServiceHost callServiceHost = new ServiceHost(typeof(CallServiceImplementation));
             callServiceHost.UnknownMessageReceived += new EventHandler<UnknownMessageReceivedEventArgs>(callServiceHost_UnknownMessageReceived);
             callServiceHost.Faulted += new EventHandler(callServiceHost_Faulted);
-            NetTcpBinding callServiceBinding = new NetTcpBinding();
-            callServiceBinding.ListenBacklog = 50;
-            callServiceBinding.MaxBufferPoolSize = long.MaxValue;
-            callServiceBinding.MaxBufferSize = int.MaxValue;
-            callServiceBinding.MaxConnections = 1000;
-            callServiceBinding.MaxReceivedMessageSize = (long)int.MaxValue;
-            callServiceBinding.TransactionFlow = true;
+            NetTcpBinding callServiceBinding = new NetTcpBinding
+            {
+                ListenBacklog = 50,
+                MaxBufferPoolSize = long.MaxValue,
+                MaxBufferSize = int.MaxValue,
+                MaxConnections = 1000,
+                MaxReceivedMessageSize = (long)int.MaxValue,
+                TransactionFlow = true
+            };
 
             callServiceBinding.Security.Mode = SecurityMode.Transport;
             callServiceBinding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Windows;
             callServiceBinding.Security.Transport.ProtectionLevel = System.Net.Security.ProtectionLevel.EncryptAndSign;
 
-            callServiceHost.AddServiceEndpoint(typeof(ICallService), callServiceBinding, "net.tcp://192.168.2.104:5262/ICallService");
+            callServiceHost.AddServiceEndpoint(typeof(ICallService), callServiceBinding, "net.tcp://192.168.0.9:5262/ICallService");
 
             callServiceHost.Description.Behaviors.RemoveAll<ServiceMetadataBehavior>();
             callServiceHost.Description.Behaviors.Add(new ServiceMetadataBehavior()
             {
-                HttpGetUrl = new Uri("http://192.168.2.104:5263/ICallServiceDescription"),
+                HttpGetUrl = new Uri("http://192.168.0.9:5263/ICallServiceDescription"),
                 HttpGetEnabled = true
             });
 
@@ -56,18 +57,20 @@ namespace SIPServer.Hosting
 
             #region ManagementService
             ServiceHost managementServiceHost = new ServiceHost(typeof(ManagementServiceImplementation));
-            NetNamedPipeBinding managementServiceBinding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.Transport);
-            managementServiceBinding.MaxBufferPoolSize = long.MaxValue;
-            managementServiceBinding.MaxBufferSize = int.MaxValue;
-            managementServiceBinding.MaxReceivedMessageSize = (long)int.MaxValue;
+            NetNamedPipeBinding managementServiceBinding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.Transport)
+            {
+                MaxBufferPoolSize = long.MaxValue,
+                MaxBufferSize = int.MaxValue,
+                MaxReceivedMessageSize = (long)int.MaxValue
+            };
             managementServiceBinding.Security.Transport.ProtectionLevel = System.Net.Security.ProtectionLevel.EncryptAndSign;
 
-            managementServiceHost.AddServiceEndpoint(typeof(IManagementServiceContract), managementServiceBinding, "net.pipe://localhost/IManagementService");
+            managementServiceHost.AddServiceEndpoint(typeof(IManagementServiceContract), managementServiceBinding, "net.pipe://192.168.0.9/IManagementService");
 
             managementServiceHost.Description.Behaviors.RemoveAll<ServiceMetadataBehavior>();
             managementServiceHost.Description.Behaviors.Add(new ServiceMetadataBehavior()
             {
-                HttpGetUrl = new Uri("http://localhost:8890/IManagementServiceDescription"),
+                HttpGetUrl = new Uri("http://192.168.0.9:8890/IManagementServiceDescription"),
                 HttpGetEnabled = true
             });
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Reflection;
 
 namespace SIPServer.Model.Header
 {
@@ -52,9 +48,9 @@ namespace SIPServer.Model.Header
         /// <param name="header">The header.</param>
         public void AnalyseHeaderFromString(string header)
         {
-            if(String.IsNullOrEmpty(header))
+            if(string.IsNullOrEmpty(header))
             {
-                throw new ArgumentException(String.Format("The Parameter Header can not be {0}.", header == null ? "null" : "empty"), "header");
+                throw new ArgumentException(string.Format("The Parameter Header can not be {0}.", header == null ? "null" : "empty"), "header");
             }
             string[] splitter = header.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -123,7 +119,7 @@ namespace SIPServer.Model.Header
                     case "Max-Forwards":
                         {
                             int maxForwards = 0;
-                            Int32.TryParse(value, out maxForwards);
+                            int.TryParse(value, out maxForwards);
                             MaxForwards = maxForwards;
                             break;
                         }
@@ -135,14 +131,14 @@ namespace SIPServer.Model.Header
                     case "Expires":
                         {
                             int expires = 0;
-                            Int32.TryParse(value, out expires);
+                            int.TryParse(value, out expires);
                             Expires = expires;
                             break;
                         }
                     case "Content-Length":
                         {
                             int contentLength = 0;
-                            Int32.TryParse(value, out contentLength);
+                            int.TryParse(value, out contentLength);
                             ContentLength = contentLength;
                             break;
                         }

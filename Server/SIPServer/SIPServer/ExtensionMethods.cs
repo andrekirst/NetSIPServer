@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SIPServer
+﻿namespace SIPServer
 {
     /// <summary>
     /// 
@@ -17,9 +12,6 @@ namespace SIPServer
         /// <returns>
         /// 	<c>true</c> if [is valid port] [the specified value]; otherwise, <c>false</c>.
         /// </returns>
-        public static bool IsValidPort(this int value)
-        {
-            return value >= 0 && value < 65536;
-        }
+        public static bool IsValidPort(this int value) => value >= 0 && value < 65536;
     }
 }

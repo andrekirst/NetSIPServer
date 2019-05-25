@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SIPServer.Model.Header;
-using SIPServer.Model;
 using System.Net.Sockets;
-using SIPServer;
 using System.Net;
 
 namespace SIPServer
@@ -45,7 +39,7 @@ namespace SIPServer
         /// </summary>
         private void InitTcpListener()
         {
-            TcpListener tcpListener = new TcpListener(IPAddress.Any, Port);
+            TcpListener tcpListener = new TcpListener(localaddr: IPAddress.Any, port: Port);
         }
 
         /// <summary>

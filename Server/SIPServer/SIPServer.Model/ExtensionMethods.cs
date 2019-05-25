@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace SIPServer.Model
@@ -25,7 +23,7 @@ namespace SIPServer.Model
             }
             foreach(char c in s)
             {
-                if(!Char.IsLetterOrDigit(c))
+                if(!char.IsLetterOrDigit(c))
                 {
                     return false;
                 }
@@ -42,7 +40,7 @@ namespace SIPServer.Model
         {
             if(array == null || array.Length == 0)
             {
-                return String.Empty;
+                return string.Empty;
             }
             StringBuilder sb = new StringBuilder();
             foreach(byte b in array)

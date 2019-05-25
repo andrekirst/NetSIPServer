@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SIPServer.Services
+﻿namespace SIPServer.Services
 {
     /// <summary>
     /// 

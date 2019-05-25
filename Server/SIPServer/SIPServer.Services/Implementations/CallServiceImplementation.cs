@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SIPServer.Services.Contracts;
+﻿using SIPServer.Services.Contracts;
 using System.ServiceModel;
-using System.Transactions;
-using System.ServiceModel.Security;
-using System.ServiceModel.Dispatcher;
-using System.ServiceModel.Channels;
 
 namespace SIPServer.Services.Implementations
 {

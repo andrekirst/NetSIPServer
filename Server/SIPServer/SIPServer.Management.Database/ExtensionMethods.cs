@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data.Common;
 
 namespace SIPServer.Management.Database
@@ -19,7 +16,7 @@ namespace SIPServer.Management.Database
         /// <returns></returns>
         public static string GetString(this DbDataReader reader, string name)
         {
-            return ValidGetValueParameters(reader, name) ? reader.GetString(reader.GetOrdinal(name)) : String.Empty;
+            return ValidGetValueParameters(reader, name) ? reader.GetString(reader.GetOrdinal(name)) : string.Empty;
         }
 
         /// <summary>
@@ -41,7 +38,7 @@ namespace SIPServer.Management.Database
         /// <returns></returns>
         public static bool ValidGetValueParameters(DbDataReader reader, string name)
         {
-            return reader != null && !String.IsNullOrEmpty(name) && reader.GetOrdinal(name) >= 0;
+            return reader != null && !string.IsNullOrEmpty(name) && reader.GetOrdinal(name) >= 0;
         }
     }
 }
